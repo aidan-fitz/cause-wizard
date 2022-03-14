@@ -1,0 +1,103 @@
+description:
+  An interactive version of the cause prioritization flowchart by Jack Malde (2022) -
+  https://forum.effectivealtruism.org/posts/TCtbuGC3yBisToXxZ/a-guided-cause-prioritisation-flowchart
+questions:
+  - name: care_about_future_people
+    text: Are future people (even in millions of years) as morally important as people now?
+    options:
+      - text: "Yes"
+        jump_to: can_influence_future
+      - text: "No"
+        jump_to: humans_special_status
+  - name: humans_special_status
+    text: Are you particularly concerned about human welfare over the welfare of other sentient beings?
+    options:
+      - text: "Yes"
+        jump_to: near_term_human_welfare
+      - text: "No"
+        jump_to: near_term_animal_welfare
+  - name: can_influence_future
+    text: Is it possible to improve the future (beyond 100 years) in expectation.
+    options:
+      - text: "Yes"
+        jump_to: hinge_of_history
+      - text: "No"
+        jump_to: humans_special_status
+  - name: hinge_of_history
+    text: Do you think we could do more good via direct work in the future than we can now?
+    options:
+      - text: "Yes"
+        jump_to: invest_for_future
+      - text: "No"
+        jump_to: suffering_focused
+  - name: suffering_focused
+    text: How important is alleviating a certain amount of suffering relative to increasing happiness by the same amount?
+    options:
+      - text: More important
+        jump_to: improve_quality_of_future
+      - text: About the same
+        jump_to: small_chance_of_success
+  - name: small_chance_of_success
+    text: Are you comfortable with betting on small chances of very large payoffs?
+    options:
+      - text: "Yes"
+        jump_to: adding_people_good
+      - text: "No"
+        jump_to: climate_change
+  - name: adding_people_good
+    text: Is it morally good, bad, or neutral to create happy people?
+    options:
+      - text: Good
+        jump_to: future_will_be_good
+      - text: Bad
+        jump_to: improve_quality_of_future
+      - text: Neutral
+        jump_to: improve_quality_of_future
+  - name: future_will_be_good
+    text: As it stands, do you think that the future will be overall good, assuming we get there?
+    options:
+      - text: "Yes"
+        jump_to: can_we_become_safe
+      - text: "No"
+        jump_to: improve_quality_of_future
+  - name: can_we_become_safe
+    text: Do you think we can achieve existential security (permanently very low x-risk)?
+    options:
+      - text: "Yes"
+        jump_to: existential_security
+      - text: "No"
+        jump_to: climate_change
+causes:
+  near_term_human_welfare:
+    title: Near-term human welfare
+    sub_items:
+      - Global health and development
+      - Mental health
+      - Catastrophic risks
+  near_term_animal_welfare:
+    title: Near-term animal welfare
+    sub_items:
+      - Factory farming
+      - Wild animal suffering
+  invest_for_future:
+    title: Invest for the future
+    sub_items:
+      - Patient philanthropy
+      - Grow the EA movement
+      - Build EA infrastructure
+      - Global priorities research
+  climate_change:
+    title: Climate change
+  improve_quality_of_future:
+    title: Improve quality of future
+    sub_items:
+      - Suffering risks (s-risks)
+      - Value changes
+      - Climate change
+      - Boost economic growth or technological progress
+  existential_security:
+    title: Existential security
+    sub_items:
+      - Reduce existential risks
+      - Improve coordination
+      - Boost economic growth or technological progress
